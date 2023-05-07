@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Santral";
+  src: url("./assets/fonts/Santral-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Santral-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Santral Book";
+  src: url("./assets/fonts/Santral-Book.woff2") format("woff2"),
+    url("./assets/fonts/Santral-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Santral";
+  src: url("./assets/fonts/Santral-ExtraBold.woff2") format("woff2"),
+    url("./assets/fonts/Santral-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Santral";
+  src: url("./assets/fonts/Santral-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Santral-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Santral";
+  src: url("./assets/fonts/Santral-SemiBold.woff2") format("woff2"),
+    url("./assets/fonts/Santral-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  background-color: #161616;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
+select option {
+  color: #161616;
+}
+.select {
+  @apply border-r-4 border-transparent w-full px-3 py-2 bg-transparent outline-none;
+}
+.animate-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.animate-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+/* .alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+} */

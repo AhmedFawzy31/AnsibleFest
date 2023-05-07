@@ -1,0 +1,736 @@
+{
+  "events": {
+    "event1": {
+      "date": "2023-05-23",
+      "startTime": "11:00 AM",
+      "endTime": "12:30 PM",
+      "timeZone": "EDT",
+      "title": "Introduction to automation controller",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true
+      },
+      "link": "",
+      "room": "207"
+    },
+    "event2": {
+      "date": "2023-05-23",
+      "startTime": "11:00 AM",
+      "endTime": "11:45 AM",
+      "timeZone": "EDT",
+      "title": "IT automation at an automobile manufacturer is more than assembly-line production",
+      "type": "Interactive",
+      "proficiency": "Business",
+      "topics": {
+        "Automation": true,
+        "Business automation": true
+      },
+      "link": "",
+      "room": "102B"
+    },
+    "event3": {
+      "date": "2023-05-23",
+      "startTime": "11:00 AM",
+      "endTime": "11:45 AM",
+      "timeZone": "EDT",
+      "title": "Lessons learned deploying Red Hat Ansible Automation Platform 2 in hardened cloud environments",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "AWS": true,
+        "Infrastructure": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "151AB"
+    },
+    "event4": {
+      "date": "2023-05-23",
+      "startTime": "11:00 AM",
+      "endTime": "12:30 PM",
+      "timeZone": "EDT",
+      "title": "Terraforming clouds with Red Hat Ansible Certified Content Collections",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Cloud services": true,
+        "Provisioning": true
+      },
+      "link": "",
+      "room": "206A"
+    },
+    "event5": {
+      "date": "2023-05-23",
+      "startTime": "11:00 AM",
+      "endTime": "11:45 AM",
+      "timeZone": "EDT",
+      "title": "Why network automation is essential to complete your automation journey",
+      "type": "Interactive",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Networking": true,
+        "Provisioning": true
+      },
+      "link": "",
+      "room": "102A"
+    },
+    "event6": {
+      "date": "2023-05-23",
+      "startTime": "3:00 PM",
+      "endTime": "3:45 PM",
+      "timeZone": "EDT",
+      "title": "Accelerate hybrid cloud automation with Red Hat Ansible Automation Platform",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Cloud services": true,
+        "Azure": true,
+        "Containers": true,
+        "Hybrid cloud": true,
+        "IT automation": true,
+        "Multicloud": true,
+        "Provisioning": true,
+        "Virtualization": true
+      },
+      "link": "",
+      "room": "102B"
+    },
+    "event7": {
+      "date": "2023-05-23",
+      "startTime": "3:00 PM",
+      "endTime": "3:45 PM",
+      "timeZone": "EDT",
+      "title": "Automatic remediation and other tales of event-driven automation",
+      "type": "Interactive",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Event-driven": true
+      },
+      "link": "",
+      "room": "102A"
+    },
+    "event8": {
+      "date": "2023-05-23",
+      "startTime": "3:00 PM",
+      "endTime": "4:30 PM",
+      "timeZone": "EDT",
+      "title": "Automation intelligence with Project Wisdom",
+      "type": "Workshop",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "204AB"
+    },
+    "event9": {
+      "date": "2023-05-23",
+      "startTime": "3:00 PM",
+      "endTime": "4:30 PM",
+      "timeZone": "EDT",
+      "title": "Event-Driven Ansible with Red Hat OpenShift",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "206A"
+    },
+    "event10": {
+      "date": "2023-05-23",
+      "startTime": "4:00 PM",
+      "endTime": "4:45 PM",
+      "timeZone": "EDT",
+      "title": "JPMorgan Chase and its next-generation automation platform",
+      "type": "Interactive",
+      "proficiency": "Business",
+      "topics": {
+        "Automation": true,
+        "Business automation": true
+      },
+      "link": "",
+      "room": "102B"
+    },
+    "event11": {
+      "date": "2023-05-23",
+      "startTime": "4:00 PM",
+      "endTime": "4:45 PM",
+      "timeZone": "EDT",
+      "title": "Terraforming with Red Hat Ansible Automation Platform",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Cloud services": true,
+        "AWS": true,
+        "Azure": true,
+        "Containers": true,
+        "DevOps": true,
+        "Infrastructure": true,
+        "IT automation": true,
+        "Kubernetes": true,
+        "Provisioning": true,
+        "Application delivery": true,
+        "Application development": true
+      },
+      "link": "",
+      "room": "102A"
+    },
+    "event12": {
+      "date": "2023-05-24",
+      "startTime": "10:30 AM",
+      "endTime": "12:30 PM",
+      "timeZone": "EDT",
+      "title": "Compliance and patch management",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "DevOps": true
+      },
+      "link": "",
+      "room": "205A"
+    },
+    "event13": {
+      "date": "2023-05-24",
+      "startTime": "10:30 AM",
+      "endTime": "11:15 AM",
+      "timeZone": "EDT",
+      "title": "Event-driven automation at Mutua Madrileña",
+      "type": "Interactive",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Business automation": true
+      },
+      "link": "",
+      "room": "102A"
+    },
+    "event14": {
+      "date": "2023-05-24",
+      "startTime": "10:30 AM",
+      "endTime": "11:15 AM",
+      "timeZone": "EDT",
+      "title": "Making the case for Ansible: A practical guide for unlocking value and overcoming obstacles",
+      "type": "Interactive",
+      "proficiency": "Business",
+      "topics": {
+        "Automation": true,
+        "Business automation": true
+      },
+      "link": "",
+      "room": "102B"
+    },
+    "event15": {
+      "date": "2023-05-24",
+      "startTime": "10:30 AM",
+      "endTime": "12:30 PM",
+      "timeZone": "EDT",
+      "title": "Using Configuration as Code on Red Hat Ansible Automation Platform",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "DevOps": true
+      },
+      "link": "",
+      "room": "205B"
+    },
+    "event16": {
+      "date": "2023-05-24",
+      "startTime": "10:30 AM",
+      "endTime": "10:50 AM",
+      "timeZone": "EDT",
+      "title": "Verizon modernizes 5G deployments with automation",
+      "type": "Lightning talk",
+      "proficiency": "Business",
+      "topics": {
+        "Automation": true,
+        "Business automation": true,
+        "Networking": true
+      },
+      "link": "",
+      "room": "Summit Discover Theater #1, Expo Hall"
+    },
+    "event17": {
+      "date": "2023-05-24",
+      "startTime": "11:00 AM",
+      "endTime": "12:30 PM",
+      "timeZone": "EDT",
+      "title": "Getting started with Red Hat Ansible Automation Platform and ServiceNow",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "206A"
+    },
+    "event18": {
+      "date": "2023-05-24",
+      "startTime": "11:00 AM",
+      "endTime": "12:30 PM",
+      "timeZone": "EDT",
+      "title": "Introduction to Event-Driven Ansible and GitOps automation",
+      "type": "Workshop",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "204AB"
+    },
+    "event19": {
+      "date": "2023-05-24",
+      "startTime": "11:30 AM",
+      "endTime": "12:15 PM",
+      "timeZone": "EDT",
+      "title": "Ansible Content Creator Tools and the Road Forward",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true
+      },
+      "link": "",
+      "room": "102B"
+    },
+    "event20": {
+      "date": "2023-05-24",
+      "startTime": "11:30 AM",
+      "endTime": "12:15 PM",
+      "timeZone": "EDT",
+      "title": "Bringing Red Hat Ansible Automation Platform to the industrial edge",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "DevOps": true,
+        "Edge": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "151AB"
+    },
+    "event21": {
+      "date": "2023-05-24",
+      "startTime": "11:30 AM",
+      "endTime": "12:15 PM",
+      "timeZone": "EDT",
+      "title": "How to improve confidence in your automation software supply chain",
+      "type": "Interactive",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Edge": true,
+        "IoT": true,
+        "Microservices": true
+      },
+      "link": "",
+      "room": "104A"
+    },
+    "event22": {
+      "date": "2023-05-24",
+      "startTime": "11:30 AM",
+      "endTime": "12:15 PM",
+      "timeZone": "EDT",
+      "title": "Rockwell and Red Hat: Modernizing the industrial manufacturing world",
+      "type": "Interactive",
+      "proficiency": "Business",
+      "topics": {
+        "Automation": true,
+        "Business automation": true
+      },
+      "link": "",
+      "room": "102A"
+    },
+    "event23": {
+      "date": "2023-05-24",
+      "startTime": "1:00 PM",
+      "endTime": "1:45 PM",
+      "timeZone": "EDT",
+      "title": "Addressing InfoSec requirements with network security using Ansible",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Security": true
+      },
+      "link": "",
+      "room": "102B"
+    },
+    "event24": {
+      "date": "2023-05-24",
+      "startTime": "1:00 PM",
+      "endTime": "3:00 PM",
+      "timeZone": "EDT",
+      "title": "Advanced capabilities of automation controller in Red Hat Ansible Automation Platform",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "IT automation": true,
+        "IT management": true
+      },
+      "link": "",
+      "room": "205A"
+    },
+    "event25": {
+      "date": "2023-05-24",
+      "startTime": "1:00 PM",
+      "endTime": "1:45 PM",
+      "timeZone": "EDT",
+      "title": "Getting started with Event-Driven Ansible",
+      "type": "Interactive",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Containers": true,
+        "Data analytics": true,
+        "Analytics": true,
+        "DevOps": true,
+        "Event-driven": true,
+        "Hybrid cloud": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true,
+        "IT culture": true,
+        "IT processes": true,
+        "Kafka": true,
+        "Kubernetes": true,
+        "Microservices": true,
+        "Networking": true,
+        "Open source": true,
+        "Operators": true,
+        "Security": true,
+        "UIUX": true
+      },
+      "link": "",
+      "room": "151AB"
+    },
+    "event26": {
+      "date": "2023-05-24",
+      "startTime": "1:00 PM",
+      "endTime": "1:45 PM",
+      "timeZone": "EDT",
+      "title": "How to build a Fortune 25 DevOps organization and prove tangible ROI",
+      "type": "Interactive",
+      "proficiency": "Advanced",
+      "topics": {
+        "Automation": true,
+        "CICD": true,
+        "Application delivery": true
+      },
+      "link": "",
+      "room": "102A"
+    },
+    "event27": {
+      "date": "2023-05-24",
+      "startTime": "1:00 PM",
+      "endTime": "2:30 PM",
+      "timeZone": "EDT",
+      "title": "Writing your first Ansible Playbook",
+      "type": "Workshop",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "DevOps": true
+      },
+      "link": "",
+      "room": "204AB"
+    },
+    "event28": {
+      "date": "2023-05-24",
+      "startTime": "2:00 PM",
+      "endTime": "2:45 PM",
+      "timeZone": "EDT",
+      "title": "Ansible Automation Platform connector development for Azure DevOps",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Azure": true,
+        "DevOps": true
+      },
+      "link": "",
+      "room": "104C"
+    },
+    "event29": {
+      "date": "2023-05-24",
+      "startTime": "2:00 PM",
+      "endTime": "2:45 PM",
+      "timeZone": "EDT",
+      "title": "Network telemetry and event-driven automation",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Event-driven": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true,
+        "IT management": true,
+        "Networking": true,
+        "Open source": true
+      },
+      "link": "",
+      "room": "151AB"
+    },
+    "event30": {
+      "date": "2023-05-24",
+      "startTime": "2:00 PM",
+      "endTime": "2:45 PM",
+      "timeZone": "EDT",
+      "title": "Wells Fargo and Red Hat Ansible Automation Platform",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Business automation": true
+      },
+      "link": "",
+      "room": "102A"
+    },
+    "event31": {
+      "date": "2023-05-24",
+      "startTime": "3:00 PM",
+      "endTime": "3:45 PM",
+      "timeZone": "EDT",
+      "title": "Ansible Automation Platform: The Heart of Nespresso's API & Event-Driven Automation",
+      "type": "Interactive",
+      "proficiency": "Introductory",
+      "topics": { "Automation": true },
+      "link": "",
+      "room": "151AB"
+    },
+    "event32": {
+      "date": "2023-05-24",
+      "startTime": "3:00 PM",
+      "endTime": "4:30 PM",
+      "timeZone": "EDT",
+      "title": "Event-Driven Ansible and NetOps automation",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "208"
+    },
+    "event33": {
+      "date": "2023-05-24",
+      "startTime": "3:00 PM",
+      "endTime": "4:30 PM",
+      "timeZone": "EDT",
+      "title": "Hybrid cloud automation with Red Hat Ansible Automation Platform",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Cloud services": true,
+        "Hybrid cloud": true,
+        "Infrastructure": true,
+        "IT automation": true,
+        "Multicloud": true
+      },
+      "link": "",
+      "room": "207"
+    },
+    "event34": {
+      "date": "2023-05-24",
+      "startTime": "3:00 PM",
+      "endTime": "3:45 PM",
+      "timeZone": "EDT",
+      "title": "Red Hat Ansible Automation Platform as a service based on Red Hat OpenShift",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": { "Automation": true, "CICD": true },
+      "link": "",
+      "room": "102A"
+    },
+    "event35": {
+      "date": "2023-05-24",
+      "startTime": "4:00 PM",
+      "endTime": "4:45 PM",
+      "timeZone": "EDT",
+      "title": "Automation-first approach: the Lufthansa Technik story",
+      "type": "Interactive",
+      "proficiency": "Introductory",
+      "topics": { "Automation": true, "Provisioning": true },
+      "link": "",
+      "room": "102A"
+    },
+    "event36": {
+      "date": "2023-05-24",
+      "startTime": "4:00 PM",
+      "endTime": "4:45 PM",
+      "timeZone": "EDT",
+      "title": "How we automate siloed environments",
+      "type": "Interactive",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Event-driven": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true,
+        "IT culture": true,
+        "IT management": true,
+        "IT strategy": true,
+        "Open source": true,
+        "Provisioning": true
+      },
+      "link": "",
+      "room": "151AB"
+    },
+    "event37": {
+      "date": "2023-05-25",
+      "startTime": "8:00 AM",
+      "endTime": "10:00 AM",
+      "timeZone": "EDT",
+      "title": "Advanced capabilities of automation controller in Red Hat Ansible Automation Platform",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": { "IT automation": true, "IT management": true },
+      "link": "",
+      "room": "205B"
+    },
+    "event38": {
+      "date": "2023-05-25",
+      "startTime": "8:00 AM",
+      "endTime": "10:00 AM",
+      "timeZone": "EDT",
+      "title": "Compliance and patch management",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": { "Automation": true, "DevOps": true },
+      "link": "",
+      "room": "205C"
+    },
+    "event39": {
+      "date": "2023-05-25",
+      "startTime": "8:30 AM",
+      "endTime": "10:00 AM",
+      "timeZone": "EDT",
+      "title": "Automation intelligence with Project Wisdom",
+      "type": "Workshop",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "204AB"
+    },
+    "event40": {
+      "date": "2023-05-25",
+      "startTime": "8:30 AM",
+      "endTime": "10:00 AM",
+      "timeZone": "EDT",
+      "title": "Getting started with Red Hat Ansible Automation Platform and ServiceNow",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "207"
+    },
+    "event41": {
+      "date": "2023-05-25",
+      "startTime": "10:15 AM",
+      "endTime": "12:15 PM",
+      "timeZone": "EDT",
+      "title": "Using Configuration as Code on Red Hat Ansible Automation Platform",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": { "Automation": true, "DevOps": true },
+      "link": "",
+      "room": "205A"
+    },
+    "event42": {
+      "date": "2023-05-25",
+      "startTime": "10:30 AM",
+      "endTime": "12:00 PM",
+      "timeZone": "EDT",
+      "title": "Introduction to automation controller",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": { "Automation": true },
+      "link": "",
+      "room": "206A"
+    },
+    "event43": {
+      "date": "2023-05-25",
+      "startTime": "10:30 AM",
+      "endTime": "12:00 PM",
+      "timeZone": "EDT",
+      "title": "Introduction to Event-Driven Ansible and GitOps automation",
+      "type": "Workshop",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "Infrastructure": true,
+        "Integration": true,
+        "IT automation": true
+      },
+      "link": "",
+      "room": "204AB"
+    },
+    "event44": {
+      "date": "2023-05-25",
+      "startTime": "10:30 AM",
+      "endTime": "12:00 PM",
+      "timeZone": "EDT",
+      "title": "Terraforming clouds with Red Hat Ansible Certified Content Collections",
+      "type": "Workshop",
+      "proficiency": "Intermediate",
+      "topics": {
+        "Automation": true,
+        "Cloud services": true,
+        "Provisioning": true
+      },
+      "link": "",
+      "room": "208"
+    },
+    "event45": {
+      "date": "2023-05-25",
+      "startTime": "10:30 AM",
+      "endTime": "12:00 PM",
+      "timeZone": "EDT",
+      "title": "Writing your first Ansible Playbook",
+      "type": "Workshop",
+      "proficiency": "Introductory",
+      "topics": {
+        "Automation": true,
+        "DevOps": true
+      },
+      "link": "",
+      "room": "207"
+    }
+  }
+}
