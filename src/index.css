@@ -57,11 +57,21 @@ body,
   display: flex;
   flex-direction: column;
 }
+.container {
+  margin: auto;
+}
 select option {
   color: #161616;
 }
 .select {
   @apply border-r-4 border-transparent w-full px-3 py-2 bg-transparent outline-none;
+}
+.filterTag {
+  @apply cursor-pointer py-1 px-3 transition-all duration-300 ease-in-out;
+}
+.filterTag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
 }
 .animate-enter {
   opacity: 0;

@@ -3,7 +3,7 @@ import FilterTag from "./filter/FilterTag";
 
 const EventTopics = ({ topics }) => {
   return (
-    <div>
+    <div className="md:flex-grow">
       <h3 className="uppercase font-santralBook mt-[30px] mb-[25px] text-[14px]">
         topics
       </h3>

@@ -18,11 +18,11 @@ const FilterBox = () => {
     <>
       {tags.length !== 0 && <h3 className="mb-2">FIltering by:</h3>}
       {tags.length !== 0 && (
-        <div className="text-[12px] flex flex-wrap gap-3 mb-[35px]">
+        <div className="text-[12px] flex flex-wrap gap-3 pb-[35px]">
           {tags.map((tag) => (
             <div
               onClick={() => handleRemoveFilter(tag)}
-              className="flex justify-center items-center px-3 py-1 border-2 border-teal rounded-[75px]"
+              className="flex justify-center items-center px-3 py-1 border-2 border-teal rounded-[75px] cursor-pointer transition-all duration-300 ease-in-out hover:opacity-70"
               key={tag}
             >
               <div className="mr-2 font-bold">

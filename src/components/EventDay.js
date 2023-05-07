@@ -7,15 +7,21 @@ const EventDay = ({ day, index }) => {
   const formattedDate = date.toLocaleString("en-US", options);
   return (
     <>
-      <h1 className="text-center mb-[35px] font-bold text-[18px] leading-[23px]">
+      <h1 className="text-center mb-[35px] font-bold text-[18px] leading-[23px] md:mt-[35px] lg:text-left">
         <div>DAY {index[day.date]}</div>
         {formattedDate}
       </h1>
-      {day.data.map((event, index) => {
-        return (
-          <EventCard event={event} date={formattedDate} key={index}></EventCard>
-        );
-      })}
+      <div className="md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg-gap-10 lg:pb-8">
+        {day.data.map((event, index) => {
+          return (
+            <EventCard
+              event={event}
+              date={formattedDate}
+              key={index}
+            ></EventCard>
+          );
+        })}
+      </div>
     </>
   );
 };

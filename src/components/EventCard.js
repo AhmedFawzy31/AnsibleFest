@@ -4,11 +4,13 @@ import EventTags from "./EventTags";
 
 const EventCard = ({ event, date }) => {
   return (
-    <div className="bg-darkGray py-[25px] px-[20px] mb-[35px]">
+    <div className="flex flex-col bg-darkGray py-[25px] px-[20px] mb-[35px] md:mb-0">
       <EventTags
         tags={{ type: event.type, proficiency: event.proficiency }}
       ></EventTags>
-      <h2 className="mt-[20px] mb-[30px] text-[18px]">{event.title}</h2>
+      <h2 className="md:min-h-[85px] mt-[20px] mb-[30px] text-[18px]">
+        {event.title}
+      </h2>
       <p className="text-[12px]">
         {`Room ${event.room} | ${date} | ${event.startTime} - ${event.endTime} ${event.timeZone}`}
       </p>

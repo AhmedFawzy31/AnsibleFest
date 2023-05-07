@@ -33,11 +33,14 @@ const Filter = ({ data, setEvents }) => {
     <>
       <div className="flex justify-between">
         <h2 className="mb-4">Filter events by</h2>
-        <div onClick={resetFilter} className="text-teal cursor-pointer">
+        <div
+          onClick={resetFilter}
+          className="text-teal cursor-pointer transition-all duration-300 ease-in-out hover:opacity-70"
+        >
           Reset filter
         </div>
       </div>
-      <form className="flex flex-col gap-3 mb-[35px]">
+      <form className="flex flex-col sm:grid sm:grid-cols-3 gap-3 pb-[35px]">
         <div className="border border-light">
           <select
             value={criteria.type}

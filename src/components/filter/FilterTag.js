@@ -28,7 +28,7 @@ const FilterTag = ({ tag, type }) => {
     render = (
       <div
         onClick={handleTagClick}
-        className={`${proficiencyColor} text-black py-1 px-3 rounded-[75px] ml-[15px] font-semibold`}
+        className={`${proficiencyColor} filterTag  text-black   rounded-[75px] ml-[15px] font-semibold`}
       >
         {tag}
       </div>
@@ -37,14 +37,17 @@ const FilterTag = ({ tag, type }) => {
     render = (
       <div
         onClick={handleTagClick}
-        className="uppercase bg-teal text-black py-1 px-3 font-bold"
+        className="filterTag  uppercase bg-teal text-black   font-bold"
       >
         {tag}
       </div>
     );
   } else if (type === "topic") {
     render = (
-      <div onClick={handleTagClick} className="py-1 px-3 border border-teal">
+      <div
+        onClick={handleTagClick}
+        className="filterTag hover:bg-teal hover:text-black border border-teal"
+      >
         {tag}
       </div>
     );
