@@ -82,6 +82,15 @@ select option {
   transform: translateX(0);
   transition: opacity 300ms, transform 300ms;
 }
+.paginationItem {
+  @apply w-[30px] h-[30px] flex justify-center items-center;
+}
+.paginationCursor {
+  @apply cursor-pointer;
+}
+.paginationCursor:disabled {
+  @apply opacity-40;
+}
 /* .alert-exit {
   opacity: 1;
 }

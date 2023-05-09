@@ -1,7 +1,6 @@
 import React from "react";
 import { FilterContext } from "./FilterContext";
 import { useContext } from "react";
-
 const FilterTag = ({ tag, type }) => {
   const { isDefault, setIsDefault, setCriteria } = useContext(FilterContext);
   const handleTagClick = () => {
@@ -12,47 +11,25 @@ const FilterTag = ({ tag, type }) => {
         [type]: tag,
       };
     });
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
   };
-  let render;
+  let classes;
   if (type === "proficiency") {
     let proficiencyColor = "";
     if (tag === "Advanced") proficiencyColor = "bg-clay";
     else if (tag === "Intermediate") proficiencyColor = "bg-yellow";
     else if (tag === "Business") proficiencyColor = "bg-purple";
     else proficiencyColor = "bg-green";
-    render = (
-      <div
-        onClick={handleTagClick}
-        className={`${proficiencyColor} filterTag  text-black   rounded-[75px] ml-[15px] font-semibold`}
-      >
-        {tag}
-      </div>
-    );
+    classes = `${proficiencyColor} filterTag  text-black rounded-[75px] ml-[15px] font-semibold`;
   } else if (type === "type") {
-    render = (
-      <div
-        onClick={handleTagClick}
-        className="filterTag  uppercase bg-teal text-black   font-bold"
-      >
-        {tag}
-      </div>
-    );
+    classes = "filterTag  uppercase bg-teal text-black font-bold";
   } else if (type === "topic") {
-    render = (
-      <div
-        onClick={handleTagClick}
-        className="filterTag hover:bg-teal hover:text-black border border-teal"
-      >
-        {tag}
-      </div>
-    );
+    classes = "filterTag hover:bg-teal hover:text-black border border-teal";
   }
-  return render;
+  return (
+    <div className={classes} onClick={handleTagClick}>
+      {tag}
+    </div>
+  );
 };
 
 export default FilterTag;

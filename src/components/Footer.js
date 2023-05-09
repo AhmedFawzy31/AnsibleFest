@@ -11,7 +11,7 @@ const Footer = () => {
           alt={"footer logo"}
         ></img>
       </div>
-      <h2 className="font-bold text-center mt-[10px] text-[12px] leading-[15px]">
+      <h2 className="font-bold text-center mt-[10px] text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] leading-normal">
         Red Hat Ansible Automation<br></br>Chicago Team
       </h2>
     </div>

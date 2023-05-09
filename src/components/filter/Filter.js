@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { filterEvents, extractTopics, extract } from "../../helpers/helpers";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { FilterContext } from "./FilterContext";
 import FilterBox from "./FilterBox";
 
@@ -31,7 +31,7 @@ const Filter = ({ data, setEvents }) => {
   }, [criteria]);
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between text-[12px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px]">
         <h2 className="mb-4">Filter events by</h2>
         <div
           onClick={resetFilter}

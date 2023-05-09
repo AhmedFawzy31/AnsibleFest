@@ -1,12 +1,3 @@
-export const sortEvents = (data) => {
-  let sortedData = Object.values(data).sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateA - dateB;
-  });
-  return sortedData;
-};
-
 export const groupByDay = (sortedData) => {
   let groupedData = [];
   sortedData.forEach((item) => {
@@ -22,12 +13,15 @@ export const groupByDay = (sortedData) => {
 
 export const filterEvents = (events, criteria) => {
   const filterBy = Object.keys(criteria);
-  const filtered = Object.values(events).filter((event) => {
+  const filtered = events.filter((event) => {
     let match = true;
     for (let i = 0; i < filterBy.length; i++) {
       if (filterBy[i] === criteria[filterBy[i]].toLowerCase()) continue;
       if (filterBy[i] === "topic") {
-        if (!event.topics[criteria["topic"]]) match = false;
+        const index = event.topics.findIndex(
+          (topic) => topic === criteria["topic"]
+        );
+        if (index === -1) match = false;
       } else if (event[filterBy[i]] !== criteria[filterBy[i]]) match = false;
     }
     return match;
@@ -37,8 +31,8 @@ export const filterEvents = (events, criteria) => {
 
 export const extractTopics = (data) => {
   let uniqueTopics = [];
-  Object.values(data).forEach((event) => {
-    Object.keys(event.topics).forEach((topic) => {
+  data.forEach((event) => {
+    event.topics.forEach((topic) => {
       const index = uniqueTopics.findIndex(
         (uniqueTopic) => uniqueTopic === topic
       );
@@ -50,7 +44,7 @@ export const extractTopics = (data) => {
 
 export const extract = (data, toExtract) => {
   let unique = [];
-  Object.values(data).forEach((event) => {
+  data.forEach((event) => {
     const index = unique.findIndex(
       (uniqueItem) => uniqueItem === event[toExtract]
     );
