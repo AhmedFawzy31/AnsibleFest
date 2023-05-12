@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { FilterContext } from "./FilterContext";
+import { HomeContext } from "../../context/HomeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 const FilterBox = () => {
-  const { criteria, setCriteria } = useContext(FilterContext);
+  const { criteria, setCriteria } = useContext(HomeContext);
   const handleRemoveFilter = (type) => {
     setCriteria((prevCriteria) => {
       return {

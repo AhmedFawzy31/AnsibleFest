@@ -1,8 +1,8 @@
 import React from "react";
-import { FilterContext } from "./FilterContext";
+import { HomeContext } from "../../context/HomeContext";
 import { useContext } from "react";
 const FilterTag = ({ tag, type }) => {
-  const { isDefault, setIsDefault, setCriteria } = useContext(FilterContext);
+  const { isDefault, setIsDefault, setCriteria } = useContext(HomeContext);
   const handleTagClick = () => {
     if (isDefault) setIsDefault(false);
     setCriteria((prevCriteria) => {

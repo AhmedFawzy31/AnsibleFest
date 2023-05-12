@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { filterEvents, extractTopics, extract } from "../../helpers/helpers";
 import { useEffect } from "react";
-import { FilterContext } from "./FilterContext";
+import { HomeContext } from "../../context/HomeContext";
 import FilterBox from "./FilterBox";
 
 const Filter = ({ data, setEvents }) => {
   const { criteria, setCriteria, defaultSelect, isDefault, setIsDefault } =
-    useContext(FilterContext);
+    useContext(HomeContext);
   const topics = extractTopics(data);
   const profs = extract(data, "proficiency");
   const types = extract(data, "type");

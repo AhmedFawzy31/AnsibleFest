@@ -3,7 +3,8 @@ import { groupByDay } from "../helpers/helpers";
 import EventDay from "../components/EventDay";
 import { useState } from "react";
 import Filter from "../components/filter/Filter";
-import { FilterContextProvider } from "../components/filter/FilterContext";
+import { useContext } from "react";
+import { HomeContext } from "../context/HomeContext";
 import { MoonLoader } from "react-spinners";
 import { db } from "../firebase-config.js";
 import {
@@ -24,10 +25,16 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const Home = () => {
   const eventsRef = collection(db, "events");
   const [events, setEvents] = useState(null);
-  const [days, setDays] = useState({});
-  const [curPage, setCurPage] = useState(1);
-  const [lastPage, setLastPage] = useState(null);
-  const [lastFirst, setLastFirst] = useState(null);
+  const {
+    days,
+    setDays,
+    curPage,
+    setCurPage,
+    lastPage,
+    setLastPage,
+    lastFirst,
+    setLastFirst,
+  } = useContext(HomeContext);
   const [queryParameter, setQueryParameter] = useState(
     query(eventsRef, orderBy("date"), limit(50))
   );
@@ -36,7 +43,11 @@ const Home = () => {
     queryKey: ["events", curPage],
     queryFn: async () => {
       const response = await getDocs(queryParameter);
-      const docs = response.docs.map((doc) => doc.data());
+      const docs = response.docs.map((doc) => {
+        let ret = doc.data();
+        ret["id"] = doc.id;
+        return ret;
+      });
       return {
         data: docs,
         last: response.docs[docs.length - 1],
@@ -81,7 +92,7 @@ const Home = () => {
     setCurPage((prevPage) => prevPage - 1);
   };
   return (
-    <FilterContextProvider>
+    <>
       <div className="text-light flex-grow">
         <div className="container pt-[45px] px-[25px]">
           {isLoading && (
@@ -114,7 +125,7 @@ const Home = () => {
           <ul className="flex font-bold gap-[50px] text-light text-[20px] px-[30px] py-[15px] rounded-[75px] bg-[rgba(91,190,192,0.1)]">
             <li>
               <button
-                className="paginationItem paginationCursor"
+                className="paginationItem paginationCursor cursor-pointer"
                 disabled={curPage === 1}
                 onClick={handlePreviousPage}
               >
@@ -126,7 +137,7 @@ const Home = () => {
             </li>
             <li>
               <button
-                className="paginationItem paginationCursor"
+                className="paginationItem paginationCursor cursor-pointer"
                 onClick={handleNextPage}
                 disabled={data.size === 0 || curPage === lastPage}
               >
@@ -136,7 +147,7 @@ const Home = () => {
           </ul>
         </div>
       )}
-    </FilterContextProvider>
+    </>
   );
 };
 
