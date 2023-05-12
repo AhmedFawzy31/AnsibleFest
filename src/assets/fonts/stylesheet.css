@@ -1,16 +1,11 @@
 @font-face {
-  font-family: "Santral";
-  src: url("Santral-Bold.woff2") format("woff2"),
-    url("Santral-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Santral Book";
-  src: url("Santral-Book.woff2") format("woff2"),
-    url("Santral-Book.woff") format("woff");
+  src: url("Santral-Book.eot");
+  src: url("Santral-Book.eot?#iefix") format("embedded-opentype"),
+    url("Santral-Book.woff2") format("woff2"),
+    url("Santral-Book.woff") format("woff"),
+    url("Santral-Book.ttf") format("truetype"),
+    url("Santral-Book.svg#Santral-Book") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -18,8 +13,25 @@
 
 @font-face {
   font-family: "Santral";
-  src: url("Santral-ExtraBold.woff2") format("woff2"),
-    url("Santral-ExtraBold.woff") format("woff");
+  src: url("Santral-Bold.eot");
+  src: url("Santral-Bold.eot?#iefix") format("embedded-opentype"),
+    url("Santral-Bold.woff2") format("woff2"),
+    url("Santral-Bold.woff") format("woff"),
+    url("Santral-Bold.ttf") format("truetype"),
+    url("Santral-Bold.svg#Santral-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Santral";
+  src: url("Santral-ExtraBold.eot");
+  src: url("Santral-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("Santral-ExtraBold.woff2") format("woff2"),
+    url("Santral-ExtraBold.woff") format("woff"),
+    url("Santral-ExtraBold.ttf") format("truetype"),
+    url("Santral-ExtraBold.svg#Santral-ExtraBold") format("svg");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -27,8 +39,12 @@
 
 @font-face {
   font-family: "Santral";
-  src: url("Santral-Regular.woff2") format("woff2"),
-    url("Santral-Regular.woff") format("woff");
+  src: url("Santral-Regular.eot");
+  src: url("Santral-Regular.eot?#iefix") format("embedded-opentype"),
+    url("Santral-Regular.woff2") format("woff2"),
+    url("Santral-Regular.woff") format("woff"),
+    url("Santral-Regular.ttf") format("truetype"),
+    url("Santral-Regular.svg#Santral-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -36,8 +52,12 @@
 
 @font-face {
   font-family: "Santral";
-  src: url("Santral-SemiBold.woff2") format("woff2"),
-    url("Santral-SemiBold.woff") format("woff");
+  src: url("Santral-SemiBold.eot");
+  src: url("Santral-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("Santral-SemiBold.woff2") format("woff2"),
+    url("Santral-SemiBold.woff") format("woff"),
+    url("Santral-SemiBold.ttf") format("truetype"),
+    url("Santral-SemiBold.svg#Santral-SemiBold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
