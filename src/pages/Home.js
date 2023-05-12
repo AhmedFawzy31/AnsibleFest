@@ -1,4 +1,3 @@
-import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { groupByDay } from "../helpers/helpers";
 import EventDay from "../components/EventDay";
@@ -27,18 +26,20 @@ const Home = () => {
   const [events, setEvents] = useState(null);
   const [days, setDays] = useState({});
   const [curPage, setCurPage] = useState(1);
+  const [lastPage, setLastPage] = useState(null);
   const [lastFirst, setLastFirst] = useState(null);
   const [queryParameter, setQueryParameter] = useState(
     query(eventsRef, orderBy("date"), limit(50))
   );
+
   const { isLoading, isSuccess, data } = useQuery({
-    queryKey: ["events", queryParameter],
+    queryKey: ["events", curPage],
     queryFn: async () => {
       const response = await getDocs(queryParameter);
-      const data = response.docs.map((doc) => doc.data());
+      const docs = response.docs.map((doc) => doc.data());
       return {
-        data: data,
-        last: response.docs[response.docs.length - 1],
+        data: docs,
+        last: response.docs[docs.length - 1],
         first: response.docs[0],
         size: response.size,
       };
@@ -46,16 +47,15 @@ const Home = () => {
     onSuccess: ({ data, size, first }) => {
       const grouped = groupByDay(data);
       grouped.forEach((group) => {
-        console.log(group.date, days, group.date in days);
         if (!(group.date in days))
           days[group.date] = Object.keys(days).length + 1;
       });
       setDays(days);
-      setEvents(data);
       if (size !== 0) setLastFirst(first);
     },
     onError: () => {},
   });
+
   const handleNextPage = () => {
     setQueryParameter(
       query(eventsRef, orderBy("date"), startAfter(data.last), limit(50))
@@ -76,6 +76,7 @@ const Home = () => {
       setQueryParameter(
         query(eventsRef, orderBy("date"), startAt(lastFirst), limitToLast(50))
       );
+      setLastPage(curPage - 1);
     }
     setCurPage((prevPage) => prevPage - 1);
   };
@@ -94,15 +95,13 @@ const Home = () => {
               speedMultiplier={1}
             />
           )}
-          {isSuccess && events && days && (
+          {isSuccess && days && (
             <div>
               <Filter data={data.data} setEvents={setEvents}></Filter>
-              {groupByDay(events).map((day, index) => {
+              {groupByDay(events ? events : data.data).map((day, index) => {
                 return <EventDay key={index} day={day} index={days}></EventDay>;
               })}
-              {Object.keys(events).length === 0 && data.size > 0 && (
-                <h2>No events found.</h2>
-              )}
+              {events && events.length === 0 && <h2>No events found.</h2>}
               {data.size === 0 && curPage > 1 && (
                 <h2>You've reached the end.</h2>
               )}
@@ -129,7 +128,7 @@ const Home = () => {
               <button
                 className="paginationItem paginationCursor"
                 onClick={handleNextPage}
-                disabled={data.size === 0}
+                disabled={data.size === 0 || curPage === lastPage}
               >
                 <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
               </button>

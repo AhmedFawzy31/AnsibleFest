@@ -28,7 +28,7 @@ const Filter = ({ data, setEvents }) => {
       const filtered = filterEvents(data, criteria);
       setEvents(filtered);
     }
-  }, [criteria]);
+  }, [criteria, data]);
   return (
     <>
       <div className="flex justify-between text-[12px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px]">
