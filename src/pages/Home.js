@@ -112,9 +112,11 @@ const Home = () => {
               {groupByDay(events ? events : data.data).map((day, index) => {
                 return <EventDay key={index} day={day} index={days}></EventDay>;
               })}
-              {events && events.length === 0 && <h2>No events found.</h2>}
+              {events && events.length === 0 && (
+                <h2 className="mb-5">No events found.</h2>
+              )}
               {data.size === 0 && curPage > 1 && (
-                <h2>You've reached the end.</h2>
+                <h2 className="mb-5">You've reached the end.</h2>
               )}
             </div>
           )}
@@ -125,7 +127,7 @@ const Home = () => {
           <ul className="flex font-bold gap-[50px] text-light text-[20px] px-[30px] py-[15px] rounded-[75px] bg-[rgba(91,190,192,0.1)]">
             <li>
               <button
-                className="paginationItem paginationCursor cursor-pointer"
+                className="paginationItem paginationCursor"
                 disabled={curPage === 1}
                 onClick={handlePreviousPage}
               >
@@ -137,7 +139,7 @@ const Home = () => {
             </li>
             <li>
               <button
-                className="paginationItem paginationCursor cursor-pointer"
+                className="paginationItem paginationCursor"
                 onClick={handleNextPage}
                 disabled={data.size === 0 || curPage === lastPage}
               >
