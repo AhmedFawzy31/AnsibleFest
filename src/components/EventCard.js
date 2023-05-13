@@ -6,7 +6,7 @@ import { HomeContext } from "../context/HomeContext";
 import { Link } from "react-router-dom";
 
 const EventCard = ({ event, date }) => {
-  const { criteria } = useContext(HomeContext);
+  const { criteria, curPage } = useContext(HomeContext);
   const [springs, api] = useSpring(() => ({
     from: { opacity: 0, transform: "scale(0.8)" },
     to: { opacity: 1, transform: "scale(1)" },
@@ -16,7 +16,7 @@ const EventCard = ({ event, date }) => {
       from: { opacity: 0, transform: "scale(0.8)" },
       to: { opacity: 1, transform: "scale(1)" },
     });
-  }, [criteria]);
+  }, [criteria, curPage]);
   return (
     <animated.div
       style={springs}

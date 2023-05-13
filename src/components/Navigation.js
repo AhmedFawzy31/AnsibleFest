@@ -8,7 +8,7 @@ const Navigation = () => {
   const isEvent = pathname.includes("/event/");
   return (
     <nav className={`pt-[77px] ${isEvent ? "px-[25px]" : ""}`}>
-      <div className="container">
+      <div className={`container ${isEvent ? "" : "px-[25px]"}`}>
         <Link to={"/"}>
           <img
             className={`max-w-[141px] ${isEvent ? "" : "m-auto"} lg:m-0`}

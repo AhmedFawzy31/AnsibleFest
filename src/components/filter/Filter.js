@@ -11,7 +11,7 @@ const Filter = ({ data, setEvents }) => {
   const profs = extract(data, "proficiency");
   const types = extract(data, "type");
   const resetFilter = () => {
-    setEvents(data);
+    setEvents(null);
     setCriteria(defaultSelect);
     setIsDefault(true);
   };
