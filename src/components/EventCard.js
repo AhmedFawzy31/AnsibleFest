@@ -16,11 +16,15 @@ const EventCard = ({ event, date }) => {
       from: { opacity: 0, transform: "scale(0.8)" },
       to: { opacity: 1, transform: "scale(1)" },
     });
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
   }, [criteria, curPage]);
   return (
     <animated.div
       style={springs}
-      className="flex flex-col bg-darkGray py-[25px] px-[20px] mb-[35px] md:mb-0"
+      className="flex flex-col bg-darkGray py-[25px] px-[20px] mb-[35px] xl:mb-0"
     >
       <EventTags
         tags={{ type: event.type, proficiency: event.proficiency }}

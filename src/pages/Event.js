@@ -6,6 +6,7 @@ import { MoonLoader } from "react-spinners";
 import { db } from "../firebase-config.js";
 import { doc, getDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
+import calendar from "../assets/images/calendar.svg";
 const Event = () => {
   //get id from url with react router
   const { id } = useParams();
@@ -52,10 +53,21 @@ const Event = () => {
               <div>Tuesday, May 23</div>
               <div>11:00 AM - 12:30 PM EDT</div>
             </div>
-            <p className="text-[16px] md:text-[18px] lg:text-[20px] my-[80px]">
+            <p className="text-[16px] md:text-[18px] lg:text-[20px] mt-[80px] mb-[60px]">
               {data.description}
             </p>
-            <div className="flex items-center justify-between gap-8 ">
+            <a
+              className="flex items-center text-[#E4F339] font-extrabold mb-[60px]"
+              target="#blank"
+              href={data.link}
+            >
+              <img className="mr-3" alt="calendar" src={calendar}></img>
+              <span>Add to schedule</span>
+            </a>
+            <div>
+              <h3 className="uppercase font-santralBook mb-[14px] text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px]">
+                topics
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {data.topics.map((topic) => (
                   <div
@@ -66,13 +78,6 @@ const Event = () => {
                   </div>
                 ))}
               </div>
-              <a href={data.link} target="#blank">
-                <FontAwesomeIcon
-                  color="#E4F339"
-                  size="3x"
-                  icon={faArrowRightLong}
-                ></FontAwesomeIcon>
-              </a>
             </div>
           </>
         )}

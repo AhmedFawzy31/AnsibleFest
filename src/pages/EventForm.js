@@ -44,7 +44,7 @@ const EventForm = () => {
           onSubmit={handleSubmit}
           className="bg-gray-800 p-6 rounded-lg flex flex-col gap-4"
         >
-          <div className="grid gap-3 grid-cols-5">
+          <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-5">
             <div>
               <label
                 htmlFor="date"
@@ -131,8 +131,8 @@ const EventForm = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-5 gap-3">
-            <div className="col-span-1">
+          <div className="grid md:grid-cols-5 gap-3">
+            <div className="md:col-span-1">
               <label
                 htmlFor="type"
                 className="block text-gray-400 font-semibold mb-2"
@@ -149,7 +149,7 @@ const EventForm = () => {
                 placeholder="Workshop"
               />
             </div>
-            <div className="col-span-1">
+            <div className="md:col-span-1">
               <label
                 htmlFor="proficiency"
                 className="block text-gray-400 font-semibold mb-2"
@@ -166,7 +166,7 @@ const EventForm = () => {
                 placeholder="Intermediate"
               />
             </div>
-            <div className="col-span-3">
+            <div className="md:col-span-3">
               <label
                 htmlFor="title"
                 className="block text-gray-400 font-semibold mb-2"
