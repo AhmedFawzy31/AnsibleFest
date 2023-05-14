@@ -14,9 +14,6 @@ import {
   orderBy,
   limit,
   startAfter,
-  endBefore,
-  limitToLast,
-  startAt,
 } from "firebase/firestore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
@@ -25,18 +22,10 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const Home = () => {
   const eventsRef = collection(db, "events");
   const [events, setEvents] = useState(null);
-  const {
-    days,
-    setDays,
-    curPage,
-    setCurPage,
-    lastPage,
-    setLastPage,
-    lastFirst,
-    setLastFirst,
-  } = useContext(HomeContext);
+  const { days, setDays, curPage, setCurPage, lastPage, setLastPage } =
+    useContext(HomeContext);
   const [queryParameter, setQueryParameter] = useState(
-    query(eventsRef, orderBy("date"), limit(50))
+    query(eventsRef, orderBy("date"), orderBy("startTime"), limit(50))
   );
 
   const { isLoading, isSuccess, data } = useQuery({
@@ -48,6 +37,12 @@ const Home = () => {
         ret["id"] = doc.id;
         return ret;
       });
+      const grouped = groupByDay(docs);
+      grouped.forEach((group) => {
+        if (!(group.date in days))
+          days[group.date] = Object.keys(days).length + 1;
+      });
+      setDays(days);
       return {
         data: docs,
         last: response.docs[docs.length - 1],
@@ -55,40 +50,24 @@ const Home = () => {
         size: response.size,
       };
     },
-    onSuccess: ({ data, size, first }) => {
-      const grouped = groupByDay(data);
-      grouped.forEach((group) => {
-        if (!(group.date in days))
-          days[group.date] = Object.keys(days).length + 1;
-      });
-      setDays(days);
-      if (size !== 0) setLastFirst(first);
-    },
+    onSuccess: () => {},
     onError: () => {},
   });
 
   const handleNextPage = () => {
     setQueryParameter(
-      query(eventsRef, orderBy("date"), startAfter(data.last), limit(50))
+      query(
+        eventsRef,
+        orderBy("date"),
+        orderBy("startTime"),
+        startAfter(data.last),
+        limit(50)
+      )
     );
     setCurPage((prevPage) => prevPage + 1);
   };
   const handlePreviousPage = () => {
-    if (data.size > 0) {
-      setQueryParameter(
-        query(
-          eventsRef,
-          orderBy("date"),
-          endBefore(data.first),
-          limitToLast(50)
-        )
-      );
-    } else {
-      setQueryParameter(
-        query(eventsRef, orderBy("date"), startAt(lastFirst), limitToLast(50))
-      );
-      setLastPage(curPage - 1);
-    }
+    if (data.size === 0) setLastPage(curPage - 1);
     setCurPage((prevPage) => prevPage - 1);
   };
   return (
@@ -106,7 +85,7 @@ const Home = () => {
               speedMultiplier={1}
             />
           )}
-          {isSuccess && days && (
+          {isSuccess && (
             <div>
               <Filter data={data.data} setEvents={setEvents}></Filter>
               {groupByDay(events ? events : data.data).map((day, index) => {

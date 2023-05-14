@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase-config";
 import { ClipLoader } from "react-spinners";
+import { convertTo24Hour } from "../helpers/helpers";
 const EventForm = () => {
   const [formData, setFormData] = useState({
     date: "",
@@ -34,7 +35,11 @@ const EventForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addNewEvent.mutate();
+    const startTime = convertTo24Hour(formData.startTime);
+    addNewEvent.mutate({
+      ...formData,
+      startTime: startTime,
+    });
   };
 
   return (
@@ -76,7 +81,7 @@ const EventForm = () => {
                 value={formData.startTime}
                 onChange={handleChange}
                 className="bg-gray-700 text-gray-200 rounded p-2 mb-4 w-full"
-                placeholder="HH:MM AM/PM"
+                placeholder="HH:MM AM/PM (e.g. 11:30 AM)"
               />
             </div>
             <div>
@@ -93,7 +98,7 @@ const EventForm = () => {
                 value={formData.endTime}
                 onChange={handleChange}
                 className="bg-gray-700 text-gray-200 rounded p-2 mb-4 w-full"
-                placeholder="HH:MM AM/PM"
+                placeholder="HH:MM AM/PM (e.g. 01:30 PM)"
               />
             </div>
             <div>

@@ -4,6 +4,7 @@ import EventTags from "./EventTags";
 import { useSpring, animated } from "@react-spring/web";
 import { HomeContext } from "../context/HomeContext";
 import { Link } from "react-router-dom";
+import { convertTo12Hour } from "../helpers/helpers";
 
 const EventCard = ({ event, date }) => {
   const { criteria, curPage } = useContext(HomeContext);
@@ -36,7 +37,9 @@ const EventCard = ({ event, date }) => {
         className="text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px]
       min-h-2 md:min-h-4 lg:min-h-[4rem]"
       >
-        {`Room ${event.room} | ${date} | ${event.startTime} - ${event.endTime} ${event.timeZone}`}
+        {`Room ${event.room} | ${date} | ${convertTo12Hour(
+          event.startTime
+        )} - ${event.endTime} ${event.timeZone}`}
       </p>
       <EventTopics topics={event.topics}></EventTopics>
       <div className="mt-[50px]">

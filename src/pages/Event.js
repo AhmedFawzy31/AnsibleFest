@@ -1,12 +1,12 @@
 import EventPageTag from "../components/EventPageTag";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { useQuery } from "@tanstack/react-query";
 import { MoonLoader } from "react-spinners";
 import { db } from "../firebase-config.js";
 import { doc, getDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import calendar from "../assets/images/calendar.svg";
+import { formatDate } from "../helpers/helpers";
+import { convertTo12Hour } from "../helpers/helpers";
 const Event = () => {
   //get id from url with react router
   const { id } = useParams();
@@ -49,9 +49,11 @@ const Event = () => {
               {data.title}
             </h1>
             <div className="mt-[60px] text-[20px] leading-[1.25] font-semibold">
-              <div>Room 207</div>
-              <div>Tuesday, May 23</div>
-              <div>11:00 AM - 12:30 PM EDT</div>
+              <div>{`Room ${data.room}`}</div>
+              <div>{formatDate(data.date)}</div>
+              <div>{`${convertTo12Hour(data.startTime)} - ${data.endTime} ${
+                data.timeZone
+              }`}</div>
             </div>
             <p className="text-[16px] md:text-[18px] lg:text-[20px] mt-[80px] mb-[60px]">
               {data.description}

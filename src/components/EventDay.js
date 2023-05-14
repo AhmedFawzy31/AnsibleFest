@@ -1,10 +1,9 @@
 import React from "react";
 import EventCard from "./EventCard";
+import { formatDate } from "../helpers/helpers";
 
 const EventDay = ({ day, index }) => {
-  const date = new Date(day.date);
-  const options = { weekday: "long", month: "short", day: "numeric" };
-  const formattedDate = date.toLocaleString("en-US", options);
+  const formattedDate = formatDate(day.date);
   return (
     <>
       <h1 className="text-center mb-[35px] font-bold text-[18px] xs:text-[20px] sm:text-[22px] md:text-[24px] leading-normal md:mt-[35px] lg:text-left">

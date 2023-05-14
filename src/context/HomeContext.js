@@ -13,7 +13,6 @@ export const HomeContextProvider = ({ children }) => {
   const [days, setDays] = useState({});
   const [curPage, setCurPage] = useState(1);
   const [lastPage, setLastPage] = useState(null);
-  const [lastFirst, setLastFirst] = useState(null);
   return (
     <HomeContext.Provider
       value={{
@@ -28,8 +27,6 @@ export const HomeContextProvider = ({ children }) => {
         setCurPage,
         lastPage,
         setLastPage,
-        lastFirst,
-        setLastFirst,
       }}
     >
       {children}
