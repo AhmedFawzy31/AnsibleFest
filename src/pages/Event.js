@@ -5,8 +5,7 @@ import { db } from "../firebase-config.js";
 import { doc, getDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import calendar from "../assets/images/calendar.svg";
-import { formatDate } from "../helpers/helpers";
-import { convertTo12Hour } from "../helpers/helpers";
+import { convertTo12Hour, formatDate } from "../helpers/helpers";
 const Event = () => {
   //get id from url with react router
   const { id } = useParams();
@@ -17,9 +16,7 @@ const Event = () => {
       const response = await getDoc(docRef);
       return response.data();
     },
-    onSuccess: (data) => {
-      console.log(data);
-    },
+    onSuccess: () => {},
     onError: () => {},
   });
   return (
