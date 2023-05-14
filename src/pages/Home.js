@@ -25,7 +25,7 @@ const Home = () => {
   const { days, setDays, curPage, setCurPage, lastPage, setLastPage } =
     useContext(HomeContext);
   const [queryParameter, setQueryParameter] = useState(
-    query(eventsRef, orderBy("date"), orderBy("startTime"), limit(50))
+    query(eventsRef, orderBy("date"), orderBy("startTime"), limit(20))
   );
 
   const { isLoading, isSuccess, data } = useQuery({
@@ -61,7 +61,7 @@ const Home = () => {
         orderBy("date"),
         orderBy("startTime"),
         startAfter(data.last),
-        limit(50)
+        limit(20)
       )
     );
     setCurPage((prevPage) => prevPage + 1);
