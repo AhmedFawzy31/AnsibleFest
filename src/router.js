@@ -3,6 +3,8 @@ import Root from "./pages/Root";
 import Home from "./pages/Home";
 import Event from "./pages/Event";
 import EventForm from "./pages/EventForm";
+import Auth from "./pages/Auth";
+import { requireAuth } from "./pages/Auth";
 const router = createHashRouter([
   {
     path: "/",
@@ -19,6 +21,11 @@ const router = createHashRouter([
       {
         path: "event/new",
         element: <EventForm></EventForm>,
+        loader: requireAuth,
+      },
+      {
+        path: "auth",
+        element: <Auth></Auth>,
       },
     ],
   },
