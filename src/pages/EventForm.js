@@ -58,6 +58,7 @@ const EventForm = () => {
                 Date
               </label>
               <input
+                required
                 type="date"
                 id="date"
                 name="date"
@@ -75,6 +76,7 @@ const EventForm = () => {
                 Start Time
               </label>
               <input
+                required
                 type="text"
                 id="startTime"
                 name="startTime"
@@ -92,6 +94,7 @@ const EventForm = () => {
                 End Time
               </label>
               <input
+                required
                 type="text"
                 id="endTime"
                 name="endTime"
@@ -109,6 +112,7 @@ const EventForm = () => {
                 Time Zone
               </label>
               <input
+                required
                 type="text"
                 id="timeZone"
                 name="timeZone"
@@ -126,6 +130,7 @@ const EventForm = () => {
                 Room
               </label>
               <input
+                required
                 type="text"
                 id="room"
                 name="room"
@@ -145,6 +150,7 @@ const EventForm = () => {
                 Type
               </label>
               <input
+                required
                 type="text"
                 id="type"
                 name="type"
@@ -162,6 +168,7 @@ const EventForm = () => {
                 Proficiency
               </label>
               <input
+                required
                 type="text"
                 id="proficiency"
                 name="proficiency"
@@ -179,6 +186,7 @@ const EventForm = () => {
                 Title
               </label>
               <input
+                required
                 type="text"
                 id="title"
                 name="title"
@@ -197,6 +205,7 @@ const EventForm = () => {
               Topics
             </label>
             <input
+              required
               type="text"
               id="topics"
               name="topics"
@@ -214,6 +223,7 @@ const EventForm = () => {
               Link
             </label>
             <input
+              required
               type="text"
               id="link"
               name="link"
@@ -231,6 +241,7 @@ const EventForm = () => {
               Description
             </label>
             <textarea
+              required
               id="description"
               name="description"
               value={formData.description}

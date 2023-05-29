@@ -24,8 +24,14 @@ const Home = () => {
   const [events, setEvents] = useState(null);
   const { days, setDays, curPage, setCurPage, lastPage, setLastPage } =
     useContext(HomeContext);
+  const eventsPerPage = 20;
   const [queryParameter, setQueryParameter] = useState(
-    query(eventsRef, orderBy("date"), orderBy("startTime"), limit(50))
+    query(
+      eventsRef,
+      orderBy("date"),
+      orderBy("startTime"),
+      limit(eventsPerPage)
+    )
   );
 
   const { isLoading, isSuccess, data } = useQuery({
@@ -61,7 +67,7 @@ const Home = () => {
         orderBy("date"),
         orderBy("startTime"),
         startAfter(data.last),
-        limit(50)
+        limit(eventsPerPage)
       )
     );
     setCurPage((prevPage) => prevPage + 1);
@@ -103,7 +109,7 @@ const Home = () => {
       </div>
       {isSuccess && (
         <div className="flex justify-center">
-          <ul className="flex font-bold gap-[50px] text-light text-[20px] px-[30px] py-[15px] rounded-[75px] bg-[rgba(91,190,192,0.1)]">
+          <ul className="flex font-bold gap-[20px] text-light text-[20px] px-[30px] py-[15px] rounded-[75px] bg-[rgba(91,190,192,0.1)]">
             <li>
               <button
                 className="paginationItem paginationCursor"

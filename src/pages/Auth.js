@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { ClipLoader } from "react-spinners";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  setPersistence,
+  browserSessionPersistence,
+} from "firebase/auth";
 import { useNavigate, redirect } from "react-router-dom";
 const EventForm = () => {
   const navigate = useNavigate();
@@ -12,6 +17,7 @@ const EventForm = () => {
   const login = useMutation({
     mutationFn: async () => {
       const auth = getAuth();
+      await setPersistence(auth, browserSessionPersistence);
       const response = await signInWithEmailAndPassword(
         auth,
         loginFormData.email,
@@ -52,6 +58,7 @@ const EventForm = () => {
               Email
             </label>
             <input
+              required
               type="email"
               id="email"
               name="email"
@@ -68,6 +75,7 @@ const EventForm = () => {
               password
             </label>
             <input
+              required
               type="password"
               id="password"
               name="password"
